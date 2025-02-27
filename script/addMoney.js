@@ -7,7 +7,21 @@ document.getElementById('addMoney-btn').addEventListener('click',function(event)
      const mainBalance = document.getElementById('mainBalance').innerText;
     const convertedMainBalance = parseFloat(mainBalance);
      
+const container = document.getElementsByClassName('trans-container')
+    const p = document.createElement("p");
+    p.innerText =  `
+     added ${amount} from {accountNumber}account 
+
+    `
+    
+
+
+
+
+
+
 if(amount && accountDigit){
+   if (accountNumber.length === 11 ){
      if(pin === 1234 ){
         const sum = convertedMainBalance + convertedAmount ;
         document.getElementById('mainBalance').innerText=sum;
@@ -18,4 +32,8 @@ if(amount && accountDigit){
      else{
         alert('Enter required information.')
      }
+   }
+   else{
+      alert('Invalid')
+   }
 })
