@@ -5,7 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <h1>hellooooo</h1>
+
+
+
+
+
+
+
+<body  class="bg-slate-800">
+    <section class="max-w-md  min-h-screen mx-auto py-6 bg-white">
+        <header class="">
+ <nav class="flex justify-around items-center  border-b border-gray-300 p-4">
+        <img class="w-16" src="./assets/Group.png">
+        
+        <div>
+        <h1 class="text-3xl font-bold"> $ 4500</h1>
+        <p class="text-slate-500 p-1">Available balance</p>
+        </div>
+        <button class="btn bg-blue-400">logout</button>
+ </nav>
+       
+    <section class="mt-10 mx-10">
+           <h1 class="text-2xl font-bold mb-2">Welcome to Payooo!</h1>
+           <p>Enjoy easy and convenient financial services with us. Cashout charges are low, and transactions are fast, secure, and hassle-free!</p>
+         <div>
+            <div class="cards grid grid-cols-3 mt-14 gap-2 p-2">
+
+            <div class="box cursor-pointer border border-slate-400 p-4 text-center rounded-sm bg-blue-100"> 
+                <img class="w-8 mx-auto " src="./assets/wallet1.png" alt="">
+                <h3 class="text-[12px]">Add Money</h3> 
+            </div>   
+            <div class="box cursor-pointer border border-slate-400 p-4 text-center rounded-sm bg-blue-100"> 
+                <img class="w-8 mx-auto " src="./assets/send1.png" alt="">
+                <h3 class="text-[12px]">Cash out</h3> 
+            </div>   
+            <div class="box cursor-pointer border border-slate-400 p-4 text-center rounded-sm bg-blue-100"> 
+                <img class="w-8 mx-auto " src="./assets/money1.png" alt="">
+                <h3 class="text-[12px]">Transfer Money</h3> 
+            </div>   
+            <div class="box cursor-pointer border border-slate-400 p-4 text-center rounded-sm bg-blue-100"> 
+                <img class="w-8 mx-auto " src="./assets/purse1.png" alt="">
+                <h3 class="text-[12px]">Get Bonus</h3> 
+            </div>   
+            <div class="box cursor-pointer border border-slate-400 p-4 text-center rounded-sm bg-blue-100"> 
+                <img class="w-8 mx-auto " src="./assets/bonus1.png" alt="">
+                <h3 class="text-[12px]">Pay Bill</h3> 
+            </div>   
+            <div class="box cursor-pointer border border-slate-400 p-4 text-center rounded-sm bg-blue-100"> 
+                <img class="w-8 mx-auto " src="./assets/transaction1.png" alt="">
+                <h3 class="text-[12px]">Transactions</h3> 
+            </div>   
+           
+         </div>
+    </section>
+
+    <h2>Add money</h2>
+       <div class="">
+       <div class="hero-content flex-col lg:flex-row-reverse">
+         <div class="card w-full max-w-sm shrink-0 shadow-2xl">
+          <div class="card-body">
+
+             <legend>Select Bank</legend>
+             <select class="select">
+                <option disabled selected>Select bank</option>
+                <option value="Bkash">Bkash</option>
+                <option value="Nagad">Nagad</option>
+                <option value="dbbl">DBBL</option>
+            </select>
+            <fieldset class="fieldset ">
+                <label class="fieldset-label font-bold">Bank Account Number</label>
+                <input type="number"id="input-num" class="input rounded-xl bg-slate-100 border-none" placeholder="Enter 11 digit account number" required />
+                <label class="fieldset-label font-bold">Amount to Add</label>
+                <input type="text" id="input-digit"class="input rounded-xl bg-slate-100 border-none" placeholder="Add Amount to withdraw" required/>
+                <label class="fieldset-label font-bold">Pin Number</label>
+                <input type="text" id="input-digit"class="input rounded-xl bg-slate-100 border-none" placeholder="Enter 4 digit pin number" required/>
+                
+                <button id="login-btn"class="btn btn-neutral mt-4 bg-blue-400 rounded-xl border-none">Add money</button>
+              </fieldset>
+      </div>
+        </div>
+          </div>
+        </div>
+        </section>
+        </section>
+        </header>
+    </section>
+   
+
+<script src="./script/addMoney.js"></script>
 </body>
 </html>
