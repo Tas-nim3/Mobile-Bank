@@ -4,13 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.9/daisyui.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-
-
-
-
-
-
 
 <body  class="bg-slate-800">
     <section class="max-w-md  min-h-screen mx-auto py-6 bg-white">
@@ -19,7 +15,7 @@
         <img class="w-16" src="./assets/Group.png">
         
         <div>
-        <h1 class="text-3xl font-bold"> $ 4500</h1>
+        <h1 class="text-3xl font-bold"> $ <span id="mainBalance">4500</span></h1>
         <p class="text-slate-500 p-1">Available balance</p>
         </div>
         <button class="btn bg-blue-400">logout</button>
@@ -31,11 +27,11 @@
          <div>
             <div class="cards grid grid-cols-3 mt-14 gap-2 p-2">
 
-            <div class="box cursor-pointer border border-slate-400 p-4 text-center rounded-sm bg-blue-100"> 
+            <div id="add-money-box"class="box cursor-pointer border border-slate-400 p-4 text-center rounded-sm bg-blue-100"> 
                 <img class="w-8 mx-auto " src="./assets/wallet1.png" alt="">
                 <h3 class="text-[12px]">Add Money</h3> 
             </div>   
-            <div class="box cursor-pointer border border-slate-400 p-4 text-center rounded-sm bg-blue-100"> 
+            <div id="cash-out-box" class="box cursor-pointer border border-slate-400 p-4 text-center rounded-sm bg-blue-100"> 
                 <img class="w-8 mx-auto " src="./assets/send1.png" alt="">
                 <h3 class="text-[12px]">Cash out</h3> 
             </div>   
@@ -59,7 +55,10 @@
          </div>
     </section>
 
-    <h2>Add money</h2>
+
+<!-- Add money Section -->
+    <section id="add-money">
+    <h2 class="ml-10 mt-9 font-semibold">Add money</h2>
        <div class="">
        <div class="hero-content flex-col lg:flex-row-reverse">
          <div class="card w-full max-w-sm shrink-0 shadow-2xl">
@@ -76,22 +75,46 @@
                 <label class="fieldset-label font-bold">Bank Account Number</label>
                 <input type="number"id="input-num" class="input rounded-xl bg-slate-100 border-none" placeholder="Enter 11 digit account number" required />
                 <label class="fieldset-label font-bold">Amount to Add</label>
-                <input type="text" id="input-digit"class="input rounded-xl bg-slate-100 border-none" placeholder="Add Amount to withdraw" required/>
+                <input type="text" id="amount"class="input rounded-xl bg-slate-100 border-none" placeholder="Add Amount to withdraw" required/>
                 <label class="fieldset-label font-bold">Pin Number</label>
                 <input type="text" id="input-digit"class="input rounded-xl bg-slate-100 border-none" placeholder="Enter 4 digit pin number" required/>
                 
-                <button id="login-btn"class="btn btn-neutral mt-4 bg-blue-400 rounded-xl border-none">Add money</button>
+                <button id="addMoney-btn"class="btn btn-neutral mt-4 bg-blue-400 rounded-xl border-none">Add money</button>
               </fieldset>
-      </div>
-        </div>
+            </div>
+           </div>
           </div>
         </div>
-        </section>
-        </section>
+    </section>
+
+<!--Cash out section  -->
+       <section id="cash-out" >
+        <div class="hero-content flex-col lg:flex-row-reverse">
+            <div class="card w-full max-w-sm shrink-0 shadow-2xl">
+             <div class="card-body">
+   
+        <fieldset class="fieldset ">
+            <label class="fieldset-label font-bold">Bank Account Number</label>
+            <input type="number"id="input-num" class="input rounded-xl bg-slate-100 border-none" placeholder="Enter 11 digit account number" required />
+            <label class="fieldset-label font-bold">Amount </label>
+            <input type="text" id="cashOut-amount"class="input rounded-xl bg-slate-100 border-none" placeholder="Add Amount to withdraw" required/>
+            <label class="fieldset-label font-bold">Pin Number</label>
+            <input type="text" id="cashOut-digit"class="input rounded-xl bg-slate-100 border-none" placeholder="Enter 4 digit pin number" required/>
+            
+            <button id="cashOut-btn"class="btn btn-neutral mt-4 bg-blue-400 rounded-xl border-none">Cash Out</button>
+          </fieldset>
+          </div>
+          </div>
+          </div>
+          
+       </section>
+
+
         </header>
     </section>
-   
 
 <script src="./script/addMoney.js"></script>
+<script src="./script/cashOut.js"></script>
+<script src="./script/tagle.js"></script>
 </body>
 </html>
